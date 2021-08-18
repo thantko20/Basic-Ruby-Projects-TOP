@@ -5,9 +5,7 @@ def caesar_cipher
   loop do
     print "Key: "
     key = gets.to_i
-    if key > 0 then break
-    else p "Key must be positive integer!"
-    end
+    key > 0 ? break : (p "Key must be positive integer!")
   end
 
   new_array = string.chars.map { |char| char.ord }
