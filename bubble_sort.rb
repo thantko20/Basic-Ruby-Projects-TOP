@@ -4,10 +4,7 @@ def bubble_sort(array)
   array.size.times do
     for i in 0..array.size-2
       if array[i] > array[i+1]
-        temp = 0
-        temp = array[i]
-        array[i] = array[i+1]
-        array[i+1] = temp
+        array[i], array[i+1] = array[i+1], array[i]
         sorted = false
       end
     end
