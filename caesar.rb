@@ -8,7 +8,7 @@ def caesar_cipher
     key.positive? ? break : (p 'Key must be positive integer!')
   end
 
-  new_array = string.chars.map { |char| char.ord }
+  new_array = string.chars.map(&:ord)
   new_array.map! do |num|
     if num.between?(65, 90)
       num = ((num - 65 + key) % 26) + 65
