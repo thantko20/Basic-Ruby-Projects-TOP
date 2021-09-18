@@ -1,13 +1,4 @@
-def caesar_cipher
-  print 'Text: '
-  string = gets.to_s
-  key = 0
-  loop do
-    print 'Key: '
-    key = gets.to_i
-    key.positive? ? break : (p 'Key must be positive integer!')
-  end
-
+def caesar_cipher(string, key)
   new_array = string.chars.map(&:ord)
   new_array.map! do |num|
     if num.between?(65, 90)
@@ -19,7 +10,5 @@ def caesar_cipher
     end
     num = num.chr
   end
-  puts new_array.join('')
+  new_array.join('')
 end
-
-caesar_cipher
